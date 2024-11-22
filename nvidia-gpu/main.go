@@ -60,8 +60,7 @@ func (m *Gpu) TestCuda(ctx context.Context) (string, error) {
 func (m *Gpu) Cuda(ctx context.Context) *dagger.Container {
 	return dag.Container().
 		// From("nvidia/cuda:12.6.2-base-ubuntu24.04").
-		From("registry.dagger.io/engine:v0.14.0-gpu").
-		// FIXME: this is an attempt to fix the error: "fork/exec /usr/bin/nvidia-container-runtime-hook: no such file or directory"
-		// WithExec([]string{"sh", "-c", "apt update && apt install -y nvidia-container-toolkit"}).
+		// From("registry.dagger.io/engine:v0.14.0-gpu").
+		From("rajatjindal/nvidia-dagger-debug:1").
 		ExperimentalWithAllGPUs()
 }
