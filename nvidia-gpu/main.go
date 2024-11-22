@@ -49,8 +49,9 @@ func (m *Gpu) TestCuda(ctx context.Context) (string, error) {
 		// From("nvidia/cuda:12.6.2-base-ubuntu24.04").
 		From("nvidia/cuda:11.7.1-base-ubuntu22.04").
 		// FIXME: this is an attempt to fix the error: "fork/exec /usr/bin/nvidia-container-runtime-hook: no such file or directory"
-		WithExec([]string{"sh", "-c", "apt update && apt install -y nvidia-container-toolkit"}).
+		// WithExec([]string{"sh", "-c", "apt update && apt install -y nvidia-container-toolkit"}).
 		ExperimentalWithAllGPUs().
-		WithExec([]string{"nvidia-smi", "-L"}).
+		// WithExec([]string{"nvidia-smi", "-L"}).
+		WithExec([]string{"nvidia-smi"}).
 		Stdout(ctx)
 }
