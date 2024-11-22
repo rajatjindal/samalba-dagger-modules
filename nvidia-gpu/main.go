@@ -62,5 +62,6 @@ func (m *Gpu) Cuda(ctx context.Context) *dagger.Container {
 		// From("nvidia/cuda:12.6.2-base-ubuntu24.04").
 		// From("registry.dagger.io/engine:v0.14.0-gpu").
 		From("rajatjindal/nvidia-dagger-debug:1").
+		WithExec(nil, dagger.ContainerWithExecOpts{NoInit: true}).
 		ExperimentalWithAllGPUs()
 }
