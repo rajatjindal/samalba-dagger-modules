@@ -6,7 +6,7 @@
     {
       "name": "dagrr",
       "source": "github.com/rajatjindal/gerhard-daggerverse/dagrr@daggr-gpu",
-      "pin": "a61d2e711091bd596451d5e4a5dda0a62bf798a8"
+      "pin": "4c6bf5146ff95cd553c9093b8915fe867849608c"
     }
   ],
   "source": "."
