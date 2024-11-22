@@ -52,6 +52,7 @@ func (m *Gpu) TestCuda(ctx context.Context) (string, error) {
 		// WithExec([]string{"sh", "-c", "apt update && apt install -y nvidia-container-toolkit"}).
 		ExperimentalWithAllGPUs().
 		// WithExec([]string{"nvidia-smi", "-L"}).
-		WithExec([]string{"nvidia-smi"}).
+		WithExec([]string{"apt", "list", "--installed"}).
+		// WithExec([]string{"nvidia-smi"}).
 		Stdout(ctx)
 }
