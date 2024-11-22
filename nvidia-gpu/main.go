@@ -63,6 +63,6 @@ func (m *Gpu) Cuda(ctx context.Context) *dagger.Container {
 		// From("registry.dagger.io/engine:v0.14.0-gpu").
 		From("rajatjindal/nvidia-dagger-debug:1").
 		ExperimentalWithAllGPUs().
-		WithExec("sh", dagger.ContainerWithExecOpts{NoInit: true})
+		WithExec([]string{"sh"}, dagger.ContainerWithExecOpts{NoInit: true})
 
 }
