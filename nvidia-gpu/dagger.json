@@ -5,8 +5,8 @@
   "dependencies": [
     {
       "name": "dagrr",
-      "source": "github.com/samalba/gerhard-daggerverse/dagrr@daggr-gpu",
-      "pin": "b4269a08afb32e4a9b228f6eaba0416869bb6cd4"
+      "source": "github.com/rajatjindal/gerhard-daggerverse/dagrr@daggr-gpu",
+      "pin": "cf89db54ff03cbb098de3b0ddbbf0604cd598b33"
     }
   ],
   "source": "."
