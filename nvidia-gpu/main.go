@@ -57,7 +57,7 @@ func (m *Gpu) TestCuda(ctx context.Context) (string, error) {
 		Stdout(ctx)
 }
 
-func (m *Gpu) Cuda(ctx context.Context) (*dagger.Container, error) {
+func (m *Gpu) Cuda(ctx context.Context) *dagger.Container {
 	return dag.Container().
 		// From("nvidia/cuda:12.6.2-base-ubuntu24.04").
 		From("registry.dagger.io/engine:v0.14.0-gpu").
